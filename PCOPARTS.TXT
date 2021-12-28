@@ -1,0 +1,85 @@
+NTO/PCO 106B (8/79)
+
+A  - (S) Triangle Out
+B  - (S) Unbuffered Sawtooth (NTO?)
+C  - (S) Sine Out
+D  - (S) Sync in
+E  - ?
+F  - (S) Linear FM in
+G  - (S) Sawtooth Out
+H  - (S) CV in
+J  - (S) CV in
+K  - (S) Variable CV
+L  - (S) Variable CV
+
+W  - (U) 0v
+w  - (S)
+ww - (S)
+
+X  - (U) +12v
+x  - (S)
+xx - (S)
+
+Z  - (U) -12v
+z  - (S)
+zz - (U)
+
+
+Parts:
+
+R01  22K  1%   R21  6K04 1%   R41  220K 5%
+R02  1K1  1%   R22  47K  5%   R42  100R 5%
+R03  100K 5%   R23  6K04 1%   R43  2K05 1%
+R04  1K0  5%   R24  4K7  5%   R44  41K2 1%
+R05  15K  5%   R25  10K  5%   R45  100K 1%
+R06  330R 5%   R26  10K  5%   R46  100K 1%
+R07  470K 5%   R27  4K7  5%   R47  100K 1%
+R08  4K64 1%   R28  1M0  1%   R48  100K 5%
+R09  100K 1%   R29  470K 5%   R49  196K 1%
+R10  10K  5%   R30  590R 1%   R50  196K 1%
+R11  100K 1%   R31  4K7  5%   R51  80K6 1%
+R12  100K 5%   R32  210R 1%   R52  80K6 1%
+R13  330R 5%   R33  280K 1%   R53  51K1 1%
+R14  1M0  5%   R34  6K8  5%   R54  Not fitted
+R15  2K2  5%   R35  5K1  1%
+R16  4K64 1%   R36  590R 1%   RV1  25K Horiz.
+R17  82R  5%   R37  82K  5%   RV2  30K Vert.
+R18  47K  5%   R38  47K  5%   RV3  100R Horiz.
+R19  22K  5%   R39  3K3? 5%
+R20  47K  5%   R40  330R 5%
+
+C01  82K 1KV   Ceramic        C11
+C02  220K 1KV Ceramic    C12  0.01 50V Ceramic
+C03  0.01 50V Ceramic    C13  47K, 1KV Ceramic
+C04  0.01 100V Ceramic   C14  0.01 100V Ceramic
+C05  0.01 100V Ceramic   C15  0.01 50V Ceramic
+C06  82K 1KV   Ceramic        C16  0.01 50V Ceramic
+C07  0.01 50V Ceramic    C17  680P Polystyrene
+C08  82K 1KV   Ceramic        C18  680P Polystyrene
+C09  5X, 1KV   Ceramic        C19  0.22 63v Wima
+C10  0.01 50V Ceramic
+
+IC1  CA3080E (sol)       Q1   EN5179 (wired as diode)
+IC2  LM324N (skt)        Q2   2N3565
+IC3  TL710CP (sol)       Q3   2N3565
+IC4  CA3130 (skt)        Q4   2N3566
+IC5  LM3046N (skt)       Q5   2N3567
+IC6  LF353N (skt)        D1   V. small
+IC7  LM324 (skt)         D2   1N4148?
+                    D3   1N4148?
+                    D4   1N4148?
+                    D5   1N4148?
+
+Top soldering:
+
+Top of R7, R8, R24, R38.
+Left of R15, R21, R28, R34, R37
+Right of R25, R30, R35, R39, D3
+Bottom of R23, R48, RV2
+IC5 pin 14, IC6 pin 8, IC7 pin 11
+
+
+
+
+
+
