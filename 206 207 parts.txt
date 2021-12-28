@@ -1,0 +1,114 @@
+
+207C
+====
+
+R1	100K
+R2	5K11 1%
+R3	220K
+R4	100K 1%
+R5	5K11 1%
+R6	100K 1%
+R7	5K11 1%
+R8	220K
+R9	5K11 1%
+R10	100K 1%
+
+R11	100K
+R12	68K
+R13	68K
+R14	100K
+R15	330K
+R16	100K
+R17	100K
+R18	330K
+R19	82K
+R20	1M0
+
+R21	1M0
+R22	150K 1%
+R23	150K 1%
+R24	100K
+R25	100K
+R26	100K
+R27	121K 1%
+R28	100K 1%
+R29	100K 1%
+R30	100K 1%
+
+R31	100K 1%
+R32	121K 1%
+R33	100K
+
+VR1	100K
+VR2	100K
+
+C1	0.22uF
+C2	0.22uF
+C3	0.01uF (Two caps to 0v on STS +)
+C4	10K?
+C5	0.01uF
+
+D1&2	1N914
+
+Q1-6	PN4250
+
+U1	4558D
+U2	LM324N
+
+
+
+206E
+====
+
+R34	1M0
+R35	1M0
+R36	110K
+R37	110K
+R38	13K
+R39	13K
+R40	82K
+
+R41	82K
+R42	82K
+R43	82K
+R44	82K
+R45	82K
+R46	82K
+R47	82K
+R48	220R
+R49	220R
+R50	4K64
+
+R51	4K64
+R52	4K64
+R53	4K64
+R54	680K
+R55	33K
+R56	1M0 (4M7)
+R57	1M0 (4M7)
+R58	33K
+R59	150K 1%
+R60	150K 1%
+R61	680K
+
+VR4	100K
+VR5	 30K (or 25K)
+VR6	100K
+
+C6	0.01uF (not fitted on STS +)
+C7	0.01uF (not fitted on STS +)
+C8	0.01uF (Two caps to 0v on STS +)
+C9	8.2pF/7pF Mica
+C10	8.2pF/7pF Mica
+C11	0.1uF/0.47uF
+C12	0.1uF/0.47uF
+C13	0.01uF (not fitted on STS +)
+
+U4	4558P
+U5	LF353N
+U6	CA3280E
+
+Note there are differences in capacitor values between early and later
+versions, and the STS versions add a small (+) next to the name and
+have a couple of extra 0.01uF caps.  There may also be minor variations 
+in the type of 4250 transistor used.  
