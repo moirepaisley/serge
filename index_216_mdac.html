@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+	<title>Resergence :: Cellar :: 216 MDAC</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" rev="stylesheet" href="../../mainstyle.css" type="text/css" media="all" />
+</head>
+
+<body>
+<p>
+<br /><span class="back2cellar">&larr; <a href="../index_modules.html">back to the Cellar</a></span>
+</p>
+<h2>216 MDAC <span class="subtitle">N Voice Controller</span></h2>
+
+<div id="content">
+
+<h3>Schematics</h3>
+<p>
+</p>
+
+<h3>PCB's</h3>
+<p>
+&rarr; <a href="216_mdac_comp_s.gif">Rough Component Overlay</a> <i>(a few component values legible)</i> [.gif]<br />
+</p>
+
+<h3>Bill of Materials</h3>
+<p>
+</p>
+
+<h3>Wiring &amp; Panels</h3>
+<p>
+</p>
+
+
+<h3>Construction notes</h3>
+<p>
+</p>
+
+
+<h3>Miscellaneous notes</h3>
+
+<div style="width:580px;">
+<h4>Excerpt from letter from Serge on this board</h4>
+
+<p>
+Also, I have enclosed the MDAC PC board.  This is essentially surplus to us,
+since Serge Modular no longer produces the module (N-Voice Controller) in
+which it was used. I am enclosing the parts stuffing diagram, also.
+Unfortunately, while preparing our soon-to-occur move to a new space
+(at the same address), I am sad to say we lost all copies of the schematic.<br />
+However, it is easily explained:
+</p>
+<p>
+Altogether, there are 16 buffers (T.I. TL082 dual op-amps)
+each with a holding capacitor fed by one of two CD4051 RCA CMOS analog demultiplexer chips
+(each routing I input to S outputs according to a 3 bit control, with an "enable"
+control input which functions to disable all switches). The demultiplexers are
+fed by an 8 bit d-to-a chip (Analog Device AD7523) plus associated parts
+(TL082 buffer, TL431 voltage reference, trimmer).
+The 4012 and 4049 chips are used either as uncommitted buffers,
+and as a small circuit to decode the 4th bit and "enable" control
+necessary for the 16 channels.
+</p>
+<p>
+In operation with a micro, a "Peripheral I/O" (PIO)
+chip such as a 6522 is used, with one eight bit PIO port feeding the DAC and the other
+eight bit port used as follows: 4 bits to derive a 1 of 16 channel selection, and a
+fifth I/O bit used as a master "enable".
+<br />
+The steps that the micro takes are:
+</p>
+
+<ul>
+	<li>1. Dis-assert the "Master Enable"  - so that all channels are disabled.</li>
+	<li>2. Send 8 bit data to the D/A.</li>
+	<li>3. Send 4 bits for channel selection..</li>
+	<li>4. Assert the "Master Enable" so that the D/A voltage can pass through the demultiplexer and be captured by the channel's op-amp buffer.</li>
+	<li>5. Wait at least 10 microseconds for the capacitor to charge up.</li>
+	<li>6. Repeat the cycle as needed to feed other channels...</li>
+</ul>
+
+<p>
+The actual card I am sending comes from working equipment and works.
+It was used as an 8 channel board, however. You can easily expand it
+to the full 16 channels by adding 5 chips. The "U" pad is the logic
+power supply (&lt;+5V) which you can obtain from the micro (negligible power drain).
+The other power supply voltages are standard Serge...
+Pads ABCDEFGH are the 8 bit inputs to the DAC.
+Pads MM, NN, PP, are the 3 bits addressing each 4051.
+l'm afraid I don't know which other pad is the 4th address bit,
+or the Master enable (CC..DD? or LL,RR?) but that can be traced.
+</p>
+<p>
+What I haven't said in all this, is there is quite a bit of elbow grease
+needed to get this project going, since you will not only have to get the board going,
+but also a suitable interface for the micro, the micro itself, and some means to get
+the micro to talk.  Preferably, it should talk FORTH, since that language makes
+it easy to talk to D/As etc...
+</p>
+</div>
+
+<h3>Related Links</h3>
+<p>
+&rarr; <a href="nvc.html">Info from Catalog </a> [.html]
+</p>
+
+
+</div>
+
+<p>&nbsp;</p>
+<p>
+<span class="update">updated Jan 18 2005</span>
+</p>
+
+<p>&nbsp;</p>
+
+</body>
+</html>
