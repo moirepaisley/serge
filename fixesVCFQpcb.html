@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Resergence :: Cellar :: 112 VCFQ/VCFX :: Fixed !</title>
+	<link rel="stylesheet" rev="stylesheet" href="../../mainstyle.css" type="text/css" media="all" />
+</head>
+<body>
+<p>
+<span class="back2cellar">&larr;<a href="index_112vcfq.html">back to VCFQ page</a></span>
+</p>
+
+<div class="quote">
+<b>6 july 07<br />
+RE: [resergence] Re: VCFQ version 1.0 FIX!!<br /></b>
+<br />
+<span class="doublequote">So could you recap any changes?</span>
+<br />
+<br />
+On the RES12 V1.0 board, R10 and R11 had their values
+swapped. The 15K is on the opamp output, and runs across
+the board just above the 100R trimmer, the 2K0 runs along
+the edge of the board. This has been corrected on V1.1.
+<br /><br />
+R17 (fourth down from the LM324) is marked "N/F", but must
+be 330R. This applies to both V1.0 and V1.1 boards.
+<br /><br />
+There is a standard mod, fitting a resistor between
+pad R (AGC input) and U2 (TL082/LF353) pin 2. 1M0 is
+the normal value, although early Serges used 4M7.
+<br /><br />
+<span class="doublequote">
+Are the submodule boards made exactly as
+silkscreen indicates?
+</span>
+<br />
+<br />
+Dunno yet. I've just started looking at the old sub-modules
+in detail. Remember though that C1, the 47p across pins 5 &amp; 6
+of the sub-module should be a high quality stable device
+because they're across the 220pF filter caps. There's no
+point in having a 1% 220pF polystyrene cap and putting a
+scabby ceramic in parallel. Rex uses micas, which seems
+like a good plan.
+<br /><br />
+Steve
+</div>
+</body>
+</html>
