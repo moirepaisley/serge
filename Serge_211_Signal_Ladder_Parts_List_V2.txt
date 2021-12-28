@@ -1,0 +1,89 @@
+FS/AP 211
+
+Signal path ladder parts list
+
+
+
+Resistors                                       Capacitors
+
+
+
+.............                                   ..................
+
+R1 - 33K                                        C1 - 470pF
+
+R2 - 33K                                        C2 - .047uF
+
+R4 - 150K 1%                                    C3 - .01uF
+
+R7 - 196K                                       C4 - 2200pF
+
+R10 - 249K                                      C5 - 1000pF
+
+R13 - 150K 1%                                   C6 - 1000pF
+
+R16 - 41.2K                                     C7 - 420pF
+
+R19 - 22K 1%                                    C8 - .1uF
+
+R22 - 249K                                      C9 - .01uF
+
+R25 - 383K                                      C10 - 4700pF
+
+R28 - 221K                                      C11 - 2200pF
+
+R31 - 124K                                      C12 - 1000pF
+
+R34 - 80.6K                                     C13 - 1000pF
+
+R37 - 22K                                       C14 - 220pF
+
+R40 - 13.7K                                     C15-21 - 0.01uF ceramic
+
+                                                C22 - 220uF
+
+
+
+18.2K 1% metalfilm resistors,                   IC's
+
+very closely matched in pairs,                  ............
+
+as in the following:
+
+                                                U1-U7 LF353N
+
+A: R3,5
+
+B: R6,8
+
+C: R9,11                                        Trimmers
+
+D: R12,14                                       ........
+
+E: R15,17
+
+F: R18,20                                       TR 1 - 100K
+
+G: R21,23                                       TR 2 - 30K
+
+H: R24,26                                       TR 3 - 30K
+
+I: R27,29                                       TR 4 - 30K
+
+J: R30,32                                       TR 5 - 10K
+
+K: R33,35                                       TR 6 - 2.5K
+
+L: R36,38                                       TR 7 - 100K
+
+M: R39,41                                       TR 8 - 100K
+
+                                                TR 9 - 30K
+
+                                                TR10 - 30K
+
+                                                TR11 - 10K
+
+                                                TR12 - 2.5K
+
+                                                TR13 - 2.5K

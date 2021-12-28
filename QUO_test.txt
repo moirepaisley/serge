@@ -1,0 +1,51 @@
+Test of Quadrature PC for use as freq. shifter
+
+.....................................................
+
+
+
+1. Plug outputs J and K into scope
+
+2. Adjust R2 to midpoint of turn 
+
+3. Adjust R1 for exactly 1.768 Volts A.C (+/- 10mV) at pad K using a voltmeter switched to its AC range. 
+
+Something wrong if the resulting oscillation is not 160 Herz plus/minus 30%.
+
+4. Adjust R4 for for 0.000 Volts D.C. (remember to switch voltmeter to DC) at pad K
+
+5. Adjust R5 for for 0.000 Volts D.C at J.
+
+6. Adjust R2 for exactly 1.768 Volts A.C at pad J (AC voltmeter)
+
+7. Repeat 4. and 5.
+
+8. Adjust R3 for volt per octave response. Input VC at pad A.
+
+
+
+.....................................................
+
+
+
+Quadrature Oscillator as separate module
+
+
+
+1. Do all steps above, except that the natural frequncy will be 5 Herz, plus minus 30%.
+
+But input +5V inte VC input to raise the Freq. so that AC volt can be read.
+
+2 Check that the outputs at L and M fall within the range of plus/minus 2.3 Volts
+
+peak down to plus/minus 1.4 Volts peak. If out of range, suspect R17, 18, 19, 20, 21, 22, 39, 40.
+
+If these are ok, replace 3280 (the 3280 is still "good" if any output is seen, and can be saved for other uses).
+
+3. Plug gate into hold input, and watch for hold.
+
+
+
+Note: "1.4 Volts peak" as seen on scope means that the top peak of the wave is 1.4 volts above the baseline,
+
+and trough 1.4 Volts below the line, i.e 2.8 Volts peak to peak.
