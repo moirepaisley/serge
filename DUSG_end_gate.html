@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Resergence :: Cellar :: 114 DSG</title>
+	<link rel="stylesheet" rev="stylesheet" href="../../mainstyle.css" type="text/css" media="all" />
+</head>
+<body>
+<p>
+<span class="back2cellar">&larr;<a href="index_114slope.html">back to DSG page</a></span>
+</p>
+
+<div class="quote">
+
+<p>About the nature of the old (?) END pulse and the new (?) GATE output signals in the DUSG.(from SMOG)</p>
+
+<b>Message 3041<br />
+From:"Fernando"<br />
+Date:  Thu Oct 28, 2004  5:01 pm<br />
+Subject:  DUSG: old vs new END pulse </b><br />
+<br />
+Hi all, In a past message it was said that the "post 1994" DUSGs have a different kind of "end" pulse signal (called "gate" in those post 94 models?)<br /> I'd like to know the difference between the two signals (old vs new DUSG models) END is normally high and GATE normally low?<br />
+Someone with a scope can check and tell us please? 
+<br /><br />
+Thanks, Fernando
+<br /><br />
+------------------------------------------------------------------
+<br /><br />
+<b>Message 3042/43<br />
+From:  "John Loffink"<br />
+Date:  Thu Oct 28, 2004 10:55 pm<br />
+Subject:  RE: [SergeModular] DUSG: old vs new END pulse</b><br />
+<br />
+The old DSG was a narrow pulse output, going high at the end of the cycle. The post 1994 DSGs with a GATE output give a variable pulse width waveform output, which is much more useful. <br />
+Okay, that's how I thought it worked on the old one. I just looked on an oscilloscope, and my 1994 era DSG has variable pulse width outputs also, through the output is labeled END rather than GATE OUT like on my newer DSG. Maybe this 1994 has the conversion but not the new labeling? 
+<br /><br />
+John Loffink
+<br /><br />
+------------------------------------------------------------------
+<br /><br />
+<b>Message 3045<br />
+From: Bob Hearn <br />
+Date:  Fri Oct 29, 2004  6:00 pm <br />
+Subject:  Re: [SergeModular] Re: DUSG: old vs new END pulse</b><br />
+<br />
+My DSG GATE out goes low when the output goes above about 3.5v, then high again when the output drops back to 0.<br />
+So, you can use it for variable width pulses, but it's fiddly to control the pulse width. 
+<br /><br />
+Bob
+<br /><br />
+------------------------------------------------------------------
+<br /><br />
+<b>Message 3048<br />
+From:  Bob Hearn<br />
+Date:  Tue Nov 2, 2004  6:05 pm <br />
+Subject:  Re: [SergeModular] Re: DUSG: old vs new END pulse</b><br />
+<br />
+Hi Fernando, 
+<br /><br />
+Sorry, I was out of town last week and going by memory.<br />
+This morning I hooked up the scope and double-checked - and found out some other interesting stuff, as well (see below).<br />
+GATE does indeed drop when OUTPUT goes above about 3.5v. Peak OUTPUT voltage is about 5.5v. So yeah, GATE is high for more than half of the attack. That doesn't seem weird to me, although it does contradict what's on the Egres Wizardry page:
+"When the cycle starts a gate trigger output goes low." Maybe that was for the old DSG - John Lofflink says below that "The old DSG was a narrow pulse output, going high at the end of the cycle". If the DSG were patched to cycle, and GATE went low when the cycle started, then you would get a narrow pulse. What would make the most sense to me, and what the Gold book implies (page 4-27), is that GATE would go low when OUTPUT switches from rising to falling. Then GATE would just be a Schmitt trigger output, set low when OUTPUT goes above 5v, and set high when OUTPUT crosses 0v. Pulsing TRIG IN would then switch the voltage slewer to track GATE instead of INPUT until the trigger is activated (i.e. OUTPUT hits 5v, and starts falling). But there seems to be more internal state than just GATE.<br />
+Try this: patch in a negative bias voltage to INPUT, while the DSG is cycling. If the bias is positive, cycling stops (because the output never falls below 0, to finish the cycle). If the bias is between -3v and 0v, you get cycles that peak at 5.5v and drop down to the bias voltage. But if the bias is &lt; -3v, cycling again stops, and OUTPUT stays at something like 8.5v + bias. I.e., at -3v OUTPUT stays at 5.5v, and it drops as you decrease the bias further. So there's an internal voltage which is added to the input, and this is what the slewer always follows. This voltage goes to about 8.5v when a cycle is started, and drops to 0 when OUTPUT rises above 5.5v. The only remaining interesting behavior is that the cycle can't be retriggered until it has completed (i.e. both GATE and the internal voltage are at 0). But I guess this is a feature, not a bug, so presumably there's just some input logic to implement this: e.g, a rising-edge detector on TRIG IN, ANDed with GATE. 
+<br /><br />
+Bob Hearn
+<br /><br />
+</div>
+
+
+</body>
+</html>

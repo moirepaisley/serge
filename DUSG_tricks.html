@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Resergence :: Cellar :: 114 DSG</title>
+	<link rel="stylesheet" rev="stylesheet" href="../../mainstyle.css" type="text/css" media="all" />
+</head>
+<body>
+<p>
+<span class="back2cellar">&larr;<a href="index_114slope.html">back to DSG page</a></span>
+</p>
+
+<div class="quote">
+
+<b>Message 2773 of 2785<br />
+From:  "cuari7"<br />
+Date:  Sat Sep 11, 2004  12:14 am <br />
+Subject:  True AD EG</b><br />
+<br />
+Anybody know of a way to turn a DSG/DTG into a true Attack/Decay EG? I don't mean what one can get by feeding a pulse/gate into the "trigger" input (the result of this is an AD envelope which unfortunately WON'T retrigger until it decays back to zero. I don't want this!!). I want the ability to have an AD EG that can be retriggered with any speed desired, without having to wait 'till it decays off. Anybody know anybody who can monkey with this thing and turn it into the above? 
+<br /><br />
+Let me know.
+<br />
+cuari7<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "kirkdegiorgio"<br />
+Date:  Sat Sep 11, 2004  1:28 am <br />
+Subject:  Re: True AD EG</b><br />
+<br />
+I get mine by feeding a gate into the INPUT jack instead of the TRIG jack... is this correct folks? any other methods...? 
+<br /><br />
+KD<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  John P<br />
+Date:  Sat Sep 11, 2004  2:08 am <br />
+Subject:  Re: [SergeModular] Re: True AD EG</b><br />
+<br />
+That's basically it as far as I know.<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "cuari7"<br />
+Date:  Sat Sep 11, 2004  2:46 am <br />
+Subject:  Re: True AD EG</b><br />
+<br />
+Actually feeding the gate into the input jack gives you an "attack/release envelope, with sustain that is present for as long as the key is depressed (so its actually an attack/sustain/release envelope). What I want is something that will allow me to get attack/release (up/down) even if I keep pressing the key. This is excellent for percussive, staccatto notes. I know of at least 2 synths which allow this option: the Moog Sonic Six and the Buchla 200 (the Quad Function generator). They lett you choose between A/D or A/R envelopes. To better understand what I mean, take a conventional ADSR, the program the following: Attack time: 0, Decay time: 50%, Sustain: 0, Release time: 0. This gives you nice percussive notes (keep in mind I don't use sequencers; only keyboards and body appendages ;-D...). So, any ideas? I kow there's a modification for the MOTM lag processor which allows the same options (making it a VC-AD/AR EG. Kewl!!). I just wish somebody came up with an idea to do the same for the DSG. It would make it the PERFECT module!!
+<br />
+cuari7<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "John Loffink"<br />
+Date:  Sat Sep 11, 2004  3:28 am <br />
+Subject:  RE: [SergeModular] Re: True AD EG</b><br />
+<br /><br />
+Here's the patch. It will take two stages of a DTG or DSG with the post 1994 GATE OUTs as opposed to the old END out, as well as a scaling processor stage. GATE to TRIG IN on first DSG stage, set Rise/Fall to short values. GATE OUT gives an inverted trigger. GATE OUT of first DSG stage to Scaling Processor INPUT2, Bias with +5V on Input 1 and full invert of INPUT2 (you could also use a Dual Processor). This gives a positive biased trigger. OUTPUT of Scaling Processor to second DSG stage INPUT. OUTPUT is your triggered AD. Set Rise and Fall to taste, but if Fall exceeds the time between GATES then you'll get envelopes that retrigger at the falling slope point, which is normal retriggerable envelope action. <br />
+<br />
+John Loffink<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "James R. Coplin"<br />
+Date:  Sat Sep 11, 2004  3:53 am <br />
+Subject:  RE: [SergeModular] Re: True AD EG</b><br />
+<br />
+The main problem is trying to change the clock as a gate stream to a pulse stream to avoid the sustain stage of the USG. I just took the gates from the clock or whatever into the trigger in on one part of the USG with the attack and decay set to zero. Take the output of this input the input of the other part of the USG and set your slopes accordingly. The attack time of the first usg seemed plenty fast to not have to use the gate and go through an inverter etc. Any objections to this approach? As an aside, if you are using the USGs as a envelope with a sustain stage, the level of the sustain is equal to the voltage present at the input. Sticking an attenuator on your gates gives nice control of the height. I'm particularly fond of running the gates through a vca of some sort using a sin to set the envelope height. Another good USG envelope trick is to use you sequencer outs to control "chains" of sustain stages for more complex envelope shapes! I probably should invest in a whole panel of USGs at some point as they are by far my favorite module on the whole planet in any system! 
+<br />
+James R. Coplin<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "John Loffink"<br />
+Date:  Sat Sep 11, 2004  4:19 am <br />
+Subject:  RE: [SergeModular] Re: True AD EG</b><br />
+<br />
+Without the inverting/bias stage this results in a gate voltage that is high 99% of the time, rather than low. <br />
+<br />
+John Loffink<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "James R. Coplin"<br />
+Date:  Sat Sep 11, 2004  4:35 am <br />
+Subject:  RE: [SergeModular] Re: True AD EG</b><br />
+<br />
+That's why I said to use the regular outputs not the gate out! With a zero rise time the leading edge is fast enough to trigger the input of the other half of the USG without having to mess with an inverter for the gate! True, it isn't as steep as the gate but from looking at it on a scope it is fast enough that I doubt it would matter for things like enveloping. I certainly can't hear a difference even at really high rates. Others applications this might become critical. Using the gate and an inverter "strictly" is more correct but I think you generally can save patching by using the pulse generated from the outputs rather than needing the gate without loosing anything as the rise time is sufficiently fast.<br /> 
+<br />
+James R. Coplin<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  John P<br />
+Date:  Sat Sep 11, 2004  4:55 am <br />
+Subject:  Re: [SergeModular] Re: True AD EG</b><br />
+<br />
+Using the regular output is fine for percussive (fast) attacks, but what if you want to do the same thing with longer attacks? The solution would seem to be to use the Loffink's gate &amp; inverter method. For the inverter you could use just about anything, incl the BLOG inverter. The attack &amp; decay time of DSG #1 in the chain would have to be longer also to 'feed' the attack buildup of DSG #2. For added fun, VC the attack &amp;  decay times of DSG #1. In this case, I think the DSG #1 would be called a 'one-shot': hit it with a pulse and it gives you one pulse out, with 'on' time you can vary if you want.<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "James R. Coplin"<br />
+Date:  Sat Sep 11, 2004  5:34 am <br />
+Subject:  RE: [SergeModular] Re: True AD EG</b><br />
+<br />
+OK, how about this then? ;) 
+You can take the output of the first section in the USG into the VC of itself and set the VC control all the way left and set to modify the rise time. This will still create a fast enough rising edge to trigger the input section of the other half of the USG. Adjust the rise time on the first half to taste as you would with the inverter. The VC adjustment makes the rise time an extremely rounded squared off wave. This allows for long attack times except in cases where very long attack times are needed. Inverters? We don't need no stinking inverters!<br />
+<br />
+James (Who is always short of inverters) Coplin<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<br />
+<b>From:  "John Loffink"<br />
+Date:  Sat Sep 11, 2004  5:53 am <br />
+Subject:  RE: [SergeModular] Re: True AD EG</b><br />
+<br />
+I see now. Yes, this does work for percussive type envelopes. 
+<br /><br />
+John Loffink<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 2979 of 2991<br />
+From:  Bob Hearn<br />
+Date:  Tue Oct 5, 2004  6:02 pm <br />
+Subject:  Re: True AD EG</b><br />
+<br />
+OK, so this thread is almost a month old, but I think this is a simpler patch, that actually works better than the others proposed. The question was, how to use a DSG/DTG to get a true attack/decay envelope, which can be retriggered before completely decaying. trigger in -> DSG #1 trig. in DSG #1 fall full right DSG #1 output -> DSG #2 input DSG #2 rise full right DSG #2 output -> envelope out Then set your envelope rise time on DSG #1 rise, and your fall time on DSG #2 fall. Since DSG #1 falls instantly, it can be retriggered as soon as it finishes rising, and DSG #2 will obligingly follow it up as fast as it wants to go. (DSG #1 could be any DTG, and DSG #2 could be a DTG with the signal input jack option.) You can also easily VC the rates. Re John Lofflink's patch, in addition to needing an extra module, setting rise time is more fiddly: you have to set it the same on both DSG/DTG stages. (However, that patch will work with two vanilla DTGs, since it doesn't need the signal in.) Re James Coplin's (modified) patch, I don't understand why you want a rising edge out of DSG #1 into DSG #2 input - only the trig. in would care about a rising edge. With the nonlinear rise on DSG #1, you either get a nonlinear envelope, or again you have to set DSG #2's rise time to be the same as the effective rise time on DSG #1. Actually the above patch is the same as your original (linear) patch, with the knobs set differently. Bob --- <br /><br />
+In SergeModular@yahoogroups.com, "cuari7" wrote: <br />
+Anybody know of a way to turn a DSG/DTG into a true Attack/Decay EG?<br />
+I don't mean what one can get by feeding a pulse/gate into<br />
+the "trigger" input (the result of this is an AD envelope which<br />
+unfortunately WON'T retrigger until it decays back to zero. I don't<br />
+want this!!).<br />
+I want the ability to have an AD EG that can be retriggered with any<br />
+speed desired, without having to wait 'till it decays off.<br />
+Anybody know anybody who can monkey with this thing and turn it into 
+> the above?<br /> 
+<br />
+> Let me know. <br />
+> cuari7 <br />
+<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 2986 of 2991<br />
+From:  Carbon111<br />
+Date:  Tue Oct 5, 2004  7:02 pm <br />
+Subject:  Re: [SergeModular] Re: True AD EG</b><br />
+<br />
+> OK, so this thread is almost a month old, but I think this is a simpler<br />
+patch, that actually works better than the others proposed. The<br />
+question was, how to use a DSG/DTG to get a true attack/decay envelope,<br />
+which can be retriggered before completely decaying. To get an AR (or ASR for that matter) that will retrigger before the cycle end, use the Input *and* the trigger input together. My MIDI/CV (Kenton Pro-Solo) has seperate gate and trigger outs. Or am I missing something?<br /> 
+<br />
+Best Regards, James --http://www.carbon111.com/serge.html<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 2990 of 2991<br />
+From:  Bob Hearn<br />
+Date:  Wed Oct 6, 2004  7:39 am <br />
+Subject:  Re: [SergeModular] Re: True AD EG</b><br />
+<br />
+> To get an AR (or ASR for that matter) that will retrigger before the<br />
+cycle end, use the Input *and* the trigger input together. My MIDI/CV<br />
+(Kenton Pro-Solo) has seperate gate and trigger outs.<br />
+Or am I missing something?<br />
+Best Regards, James Oh, I should have mentioned that the original poster specifically did *not* want a sustain, just attack/decay. If you feed a gate into both trig. in and input on a DSG, you get sustain. Also, it will give you retriggering of a sort, but depending on your rise setting, the envelope might not fully rise again - it will only rise until the gate turns off, or the peak is reached, whichever comes first. And the peak may not be where you want it - my TKB puts out 8v from KP. (Is that unusual?) 
+<br /><br />
+Original thread is here:<br />http://launch.groups.yahoo.com/group/SergeModular/message/2773 
+<br /><br />
+Cheers, <br />
+Bob<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 2991 of 2991<br />
+From:  Carbon111<br />
+Date:  Wed Oct 6, 2004  10:41 am <br />
+Subject:  Re: [SergeModular] Re: True AD EG</b><br /> 
+<br />
+> Oh, I should have mentioned that the original poster specifically did<br />
+*not* want a sustain, just attack/decay.<br />
+If you feed a gate into both trig. in and input on a DSG, you get<br />
+sustain. Ok...the original thread does go back a ways ;) I thought if you put a trigger pulse (not a gate) only into 'trig in', the DSG was a one-shot AR with full retriggering. If thats not the case, then maybe try feeding the trigger pulse to both 'input' and 'trig in' and don't use a gate logic signal at all. Now you've got me questioning the DSGs behavior...I'll mess with it tomorrow a bit ^_^ <br />
+<br />
+Best Regards, James<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 2994 of 2994<br />
+From:  "paradigmshiftbeats"<br />
+Date:  Thu Oct 7, 2004  12:38 am <br />
+Subject:  Re: True AD EG (patchable ADSR)</b><br /> 
+<br />
+Although Bob's AD patch was new to me, I have used a similar patch for a more complex EG. For those of you who don't have a Serge ADSR (or could sometimes use an extra) you can create a close approximate using a DSG/DTG and an ACPR Active Processor. Keep in mind this requires an actual *gate* source - such as TKB KP - to function properly. Gate in -> SG #1 trigger in AND SG #2 signal in SG #1 out -> ACPR input #1 SG #2 out -> ACPR input #2 Attack time set by combination of SG #1 rise and SG #2 rise Decay time set by SG #1 fall Sustain level set by ACPR 1/2 pot* Release time set by SG #2 fall * full left produces an ASR, as with any ADSR at max sustain level With a DSG you can achieve separate voltage control over attack and/or decay (SG #1 rise and/or fall), sustain (ACPR VC XFADE in) and release (SG #2 fall). Using a DTG limits your CV options and requires a signal in mod for TG #2. However, a signal input is not needed for TG #1 so you can still pull off the basic ADSR if you have an Animal DTG or a DTG with mixed mods. I have also used a CV processor in place of the ACPR but sustain is somewhat trickier to get right and you lose the sustain CV option. Insert a third SG or TG patched as a gate delay and you're very close to full DADSR functionality: Gate in -> SG #3 trigger in SG #3 output -> SG #1 trigger in AND SG #2 signal in Because of the voltage addition, the "patched ADSR" output is usually hotter (higher voltage) than that of the Serge Extended ADSR, so you will most likely need greater CV attenuation at your destination input to achieve an equivalent amplitude swing as when using the dedicated module. I'll try to post an audio clip within the next day or so. <br />
+<br />
+Patch on, Chris<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 2999 of 3013<br />
+From:  Bob Hearn<br />
+Date:  Fri Oct 8, 2004  7:23 pm <br />
+Subject:  Re: [SergeModular] Re: True AD EG (patchable ADSR)</b><br />
+<br />
+On Oct 6, 2004, at 3:38 PM, paradigmshiftbeats wrote: 
+> Although Bob's AD patch was new to me, I have used a similar patch<br />
+for a more complex EG. For those of you who don't have a Serge ADSR<br />
+... That's very clever. There are a couple of differences from the ADSR module: - If the rise times are not the same on the two SG's, you get a 'knee' in the rise signal. But maybe that's a feature - it opens up more envelope possibilities. - You don't get a full attack if you just tap a key; the gate must be on long enough for SG #2 to rise. But then if you just wanted AD you would use a different patch anyway. I have a question about the ADSR module. The Gold book says that if you use the TRIG input rather than GATE, you first get a release phase from the sustain level, then an attack, then a decay. But I don't see a release phase on mine - just attack / decay. Is my module defective? Also, the ADSR is rather odd in that if *any* output is patched to GATE, even if it's sitting at 0V, the ADSR output is 0 - but if nothing is patched it's at the sustain level. I'm not enough of an electrical engineer to really understand what's going on there, but in any case, are there any other modules that behave this way? Intuitively, it is strange for a module to distinguish between a 0 signal and nothing patched. 
+<br /><br />
+Cheers, Bob<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 3032 of 3034<br />
+From:  Carbon111<br />
+Date:  Sun Oct 17, 2004  1:36 am <br />
+Subject:  True AD EG Revisited...  </b><br />
+<br />
+Hey I know this post is a little stale but I finally got my Serge back together after its little stint on the road and wanted to revisit this. Both my Synthesizers.com controller and my Kenton MIDI/CV converter have 3 outputs: Trigger, Gate and CV. By routing the trigger signal (not gate) into the "signal in" *and* "trig in" of the DTG, I get *exactly* the kind of response cuari7 was looking for - A retriggerable AD envelope that will complete its cycle (without having to keep a key depressed)if not retriggered by a keypress. 
+<br /><br />
+Best Regards, James<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 3033 of 3034<br />
+From:  "cuari7"<br />
+Date:  Sun Oct 17, 2004  2:13 am <br />
+Subject:  Re: True AD EG Revisited... </b><br />
+<br />
+True. 
+HOWEVER...... If you program a slow attack, the pulse sent by the Kenton is so short that it'll die off way before the envelope reaches its peake (I tried this first years ago, with my Animal and a Kenton Pro2000, no less). Works great with snappy attacks, though........ 
+<br /><br />
+cuari<br />
+<br />
+-------------------------------------------------------------------
+<br />
+<b>Message 3034 of 3034<br />
+From:  Carbon111<br />
+Date:  Sun Oct 17, 2004  2:25 am <br />
+Subject:  Re: [SergeModular] Re: True AD EG Revisited... </b><br /> 
+<br />
+cuari7 wrote:<br />
+True.<br />
+> HOWEVER......<br />
+> If you program a slow attack, the pulse sent by the Kenton is so<br />
+short that it'll die off way before the envelope reaches its peake<br />
+(I tried this first years ago, with my Animal and a Kenton Pro2000,<br />
+no less). Works great with snappy attacks, though........ Arrrrgh! You are of course correct. I was so busy checking out various "fall" times that I didn't adjust the "rise" very much :( 
+<br /><br />
+Best Regards, James
+
+
+<br /><br />
+</div>
+
+
+</body>
+</html>

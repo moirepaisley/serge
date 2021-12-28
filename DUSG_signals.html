@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Resergence :: Cellar :: 114 DSG</title>
+	<link rel="stylesheet" rev="stylesheet" href="../../mainstyle.css" type="text/css" media="all" />
+</head>
+<body>
+<p>
+<span class="back2cellar">&larr;<a href="index_114slope.html">back to DSG page</a></span>
+</p>
+
+<div class="quote">
+
+<b>Message 57<br />
+From:  John Papiewski<br />
+Date:  Tue Mar 20, 2001  3:09 am<br />
+Subject:  Re: [SergeModular] Dual Universal Slope Generator Question</b> <br />
+<br />
+Oh, what a great question!<br />
+Here's what I found:In "AD" mode (just triggered) the peak is ~ 5.5 v. And it varies a little from module to module.
+If you apply both a signal in and a trigger, strange things happen:<br /><br />
+1. if the bias signal in is 0-5.5 v, the output voltage will rise to the module's normal peak.<br />
+2. if it's &gt; 5.5 v, no change is observed<br />
+3. if it's &lt; 0 v but &gt; ~ -3.5 v, the voltage rises from the negative bias to 5.5 v<br />
+4. if it's &lt; ~ -3.5 v, it stays on till the bias voltage goes over -3.5v.<br /> 
+<br />
+In other words, no release.<br />
+<br />
+Amazing, there seems to be no end of interest in these things.<br />
+<br />
+John P.<br />
+<br />
+<span class="doublequote">
+jhaible@t... wrote:<br />
+Hi,<br />
+this is my first post to the list.<br />
+I have a question about the Dual Universal Slope Generator.<br />
+I understand that can work as a linear slew function with unity<br />
+gain (thus forming a linear AR envelope of 5V when a 5V<br />
+gate is fed in its input), or as a AD envelope when a trigger<br />
+is fed into the trigger input. (And the LFO applications with<br />
+feedback applied, of course).<br />
+Now the question is: What is the peak voltage in "trigger" (AD)<br />
+mode ? Is it constant ?<br />
+What if both, an input signal and a trigger are applied ?<br />
+Will the peak output voltage be determined by both input voltages ?<br />
+<br />
+JH.<br /></span>
+<br />
+------------------------------------------------------------------------
+<br />
+<b>Message 2232<br />
+From:   "John Loffink"<br />
+Date:  Sat Dec 20, 2003  12:51 am<br />
+Subject:  RE: [SergeModular] Re: DUSG Bipolar Output?</b> <br />
+<br />
+tweet! tweet!<br />
+I looked at this on an oscilloscope to confirm, and to answer another question I had about the combination of the IN and TRIG IN jacks.<br />
+The DSG will process bipolar signals at the IN jack. These are seen as bipolar signals on the normal OUTPUT jack.<br />
+If you use the TRIG IN, it outputs a positive only signal on the OUTPUT jack.
+If you use both IN and TRIG IN, the normal trigger output is superimposed on the slewed IN signal output when greater than the slewed IN output.<br />
+<br />
+I have 1994 era DSGs, so I don't have the bipolar output, but I assume this just inverts and shifts the normal OUTPUT signal so that it is bipolar (centered around zero), typically for use as an LFO and maintain the nominal frequency setting of the modulation destination, VCO, VCF, etc.<br />
+<br />
+FYI, SINE and VARIABLE outputs on NTOs are bipolar, while the triangle and sawtooth are unipolar or positive only.<br />
+<br />
+John Loffink<br />
+The Microtonal Synthesis Web Site<br />
+http://www.microtonal-synthesis.com<br />
+The Wavemakers Synthesizer Web Site<br />
+http://www.wavemakers-synth.com<br />
+
+
+
+<br /><br />
+</div>
+
+
+</body>
+</html>

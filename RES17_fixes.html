@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Resergence :: Cellar :: 114 DSG</title>
+	<link rel="stylesheet" rev="stylesheet" href="../../mainstyle.css" type="text/css" media="all" />
+</head>
+<body>
+<p>
+<span class="back2cellar">&larr;<a href="index_114slope.html">back to DSG page</a></span>
+</p>
+
+<div class="quote">
+
+<b>Message 584 of 592<br />
+From:   "vtl5c3"<br />
+Date:  Fri Dec 19, 2003  7:28 am<br />
+Subject:  DUSG/RES 17 Fixes</b><br />
+<br />
+Alright folks,I got it working tonight!<br />
+I went through the trigger section on the
+PCB with a fine toothed comb and found that there were two issues:
+<br /><br />
+1) there's a .1 uF cap between the trigger input and V+, right between the 33 K resistor and the two diodes. Dunno why that's there, but I took it out. It's not on Dean's nor Driscoll's schematic.
+<br /><br />
+2) The 5.6V zener diode is connected between the end pulse output and pin 8 of the LM3900. I suspect that Ken's intention was to hook it to pin 7, i.e. ground.
+<br /><br />
+Once I corrected both of those bugs, the module oscillated quite well. VC control over the slopes is excellent for waveshaping. I totally understand why Mr. Driscoll added separate CV inputs for up slope and down slope.
+<br /><br />
+The only thing that isn't working yet is the LED, but that's really minor.I posted a JPG (res17_errata.jpg) to the files area showing where the components are that need to be moved.<br />
+<br />
+<br />
+<b>Message 591 of 592<br />
+From: sasami@hotkey.net.au <br />
+Date:  Sat Dec 20, 2003  5:47 am<br />
+Subject:  Re: [resergence] DUSG/RES 17 Fixes</b><br />
+<br />
+<span class="doublequote">
+I reverse engineered the DUSG too, but the differences<br />
+between Dean's version and mine were so trivial I haven't<br />
+bothered distributing it, so if you worked from Dean's<br />
+I'd expect it to work.
+<br /><br />
+Note that the LED driver is a<br />
+separate assembly in real Serges, not part of the main<br />
+circuit board, so I can offer no suggestion as to why<br />
+that doesn't work... The LED being a separate module wasn't<br /> 
+discovered to after the board was done. <br /><br />
+As for the errors, there are two per DUSG on the board,<br /> 
+exactly as Romeo pointed out. <br />
+A bypass capacitor connected to a wrong trace, and the<br />
+earth end of a Zener going to the wrong pin.<br />
+<br />
+Ken
+</span>
+
+<br /><br />
+</div>
+
+
+</body>
+</html>
