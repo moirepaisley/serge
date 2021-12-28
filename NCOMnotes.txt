@@ -1,0 +1,66 @@
+for /n mode (working from Steve's schematic SR2006)
+leave K unconnected, omit R17.
+omit R18, R12, R3.
+
+for R19 thru to R27
+R19 = 1M
+R20 = 499K
+R21 = 249k
+R22//R23 = 124.5K (as in two 249K resistors in parallel)
+R24//R25//R26//R27 = 62.25K (as in four 249K resistors in parallel)
+
+
+
+The divide pot, wiper connected to 'G'(not ground!), outer tabs to -12V and 0V.
+
+Comparator pot, wiper to 'B', outer tabs to +/-12V
+----------------------------------------------------------------------------------
+MODS 
+
+The 'E' output is unused in /n mode but is okay for driving an LED, anode to E, cathode to 0V.
+
+Serge-fans laments the lack of an attenuator on the VC input (H), I added one on mine, worth doing.
+-----------------------------------------------------------
+
+The 4093 and 4520 get 5V, op-amps enjoy +/-12V.
+
+---------------------------------------------------------------
+from Dean's notes -
+"For a Devide By N Comp...
+
+D= Comparator + Input
+C= Comparator - Input
+B= Comparator Offset Pot Wiper
+A= Comparator Output
+H= VC Input
+G= "Devision" Pot Wiper
+J= "Stepped Out"
+F= "Devide by N" Output Pulse"
+
+---------------------------------------------------------------------
+check the kit instructions for more wiring and testing info
+
+http://www.cgs.synth.net/synth/serge/kit/ncom.html
+
+Divide by 'N' Comparator
+
+Parts for Kit
+
+    * 2 Red Banana Jacks w/nut
+    * 4 Blue Banana Jacks w/nut
+    * 2 Linear Potentiometers w/nut & lockwashers
+    * 2 Shoulder Washers
+    * 2 Knobs
+    * 92" #22 Insulated Hook-up Wire (stranded)
+    * 1 COM 205 PC Board (assembled) 
+
+ 
+
+Check out the operation of this module by applying the sawtooth wave from an oscillator to the IN- input on the comparator section. Listen to the Comparator OUT, and turn the Comparator Knob. From about the 12 o'clock position to about 5 o'clock, the control should vary the pulse width from zero to full. The sound will cut off below and above these positions. With the control set for a narrow pulse width (just above the 12 o'clock position), plug the output from a slowly varying Positive control voltage into the IN+ input of the Comparator. The pulse width should be controlled from minimum to maxi mum without cutting the sound off at either end of the VC control. Adjust the knob slightly if the sound cuts off at either extreme.
+
+Disconnect the VC from the IN+ and set the knob to about 2 o'clock. Monitor the OUT ÷. Turn the Divider control (top knob) fully CCW. Turn the oscillator frequency up to a fairly high pitch, and turn the Divider control up. The pitch will step through the sub-harmonic series. Turn the knob fully CCW again and apply a varying VC to the VC IN of the top section. Listen for voltage control of this division. Note that the setting of the comparator knob or VC of the Comparator section will control the pulse width at the output of the divider section.
+
+The STEPPED OUT is a staircase wave with the number of steps proportional to the division setting.
+
+
+

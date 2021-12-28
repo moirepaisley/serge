@@ -1,0 +1,51 @@
+Com 205B Connection chart
+
+For a Dual Comparator...
+
+-Remove CD4520
+-Install J-1
+
+K = Upper + Input
+H = Upper - Input
+G = Upper "Offset" Pot Wiper
+E = Upper Output
+
+D = Lower + Input
+C = Lower - Input
+B = Lower "Offset" Pot Wiper
+A = Lower Output
+
+For a Dual Schmitt Trigger...
+
+-Remove CD4520
+-Install J-1
+
+C = "Set" Input
+B = "Set" Offset Pot Wiper
+A = "Set" Output
+
+H = "Reset" Input
+G = "Reset" Offset Pot Wiper
+E = "Reset" Output
+
+F = "Set/Reset" Output
+
+For a Devide By N Comp...
+
+-Install CD4520
+- Remove J-1
+- Connect "K" to "X"
+
+D= Comparator + Input
+C= Comparator - Input
+B= Comparator Offset Pot Wiper
+A= Comparator Output
+H= VC Input
+G= "Devision" Pot Wiper
+J= "Stepped Out"
+F= "Devide by N" Output Pulse
+
+NOTE:   In all cases from what I can tell from the schematics
+        all pots are wired from +12V to -12V
+
+
