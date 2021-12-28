@@ -1,0 +1,66 @@
+serge 111A Variable Slope VCF
+
+Parts list
+
+ R1 330R
+ R2 220K
+ R3 220K
+ R4 100K
+ R5 100K
+ R6 220K
+ R7 330R
+ R8 330R
+ R9  47K
+R10  47K
+R11 330K
+R12 820R
+R13  22K
+R14  33K
+R15  22K
+R16  475
+R17  475
+R18  6K8
+R19  6K8
+R20  47K
+R21  15K
+R22  33K
+R23  1M0
+R24  22K
+R25 390R
+R26  15K
+R27 330K
+R28  2K0
+R29 220K
+R30 470K
+R31  1M0
+R32 330K
+R33 330K
+R34  22K
+R35  22K
+R36 100K
+
+VR1 100K
+VR2 100K
+VR3  10K
+
+C1  0.01 ceramic
+C2  0.22uf
+C3  0.01 ceramic
+C4  220pF polystyrene
+C5  10k ceramic
+C6  10k caramic
+C7  220pF polystyrene
+C8  0.01 ceramic
+C9  221K ceramic
+
+U1  TL082CP
+U2  LM1458
+U3  LM324
+
+Q1  2N3567
+Q2  2N3567
+Q3  2N3567
+
+D1  1N914 or 1N4148 ?
+D2    Ditto
+D3    Ditto
